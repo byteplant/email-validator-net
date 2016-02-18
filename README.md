@@ -11,10 +11,11 @@ A small library providing a wrapper for [api.email-validator.net](http://www.ema
   ```js
   var emailValidator = require('email-validator-net')(apiKey);
 
-  var email1 = addressValidator(email, callbackFunction(returnOfCallbackFunction){ //validates address object
+  var email1 = addressValidator(email, callbackFunction(returnOfCallbackFunction){ //validates email object
     //email is a string like this: janek.rahrt@gipfel5.eu
 
     returnOfCallbackFunction.statusCode() //gives back statuscode
+    returnOfCallbackFunction.statusString() //gives back status as string, see following
     // => http://www.email-validator.net/email-verification-results.html
   });
   ```
