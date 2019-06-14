@@ -15,7 +15,10 @@ test('Use instance to check eMails', async () => {
   const call = instance(EMAIL119)
 
   expect(call).toBeInstanceOf(Promise)
-  expect(call).resolves.toMatchObject({
+  
+  const response = await call
+
+  expect(response).toMatchObject({
     apiKey: WORKING_APIKEY,
     email: EMAIL119,
     statusCode: 119,
