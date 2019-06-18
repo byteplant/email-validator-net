@@ -1,8 +1,14 @@
 import EmailValidator from '..'
 import { statusToString } from '../statusToString'
 
-const WORKING_APIKEY = 'ev-e7160cb71e8db0e574de5e8a4d914d61'
-const EMAIL119 = 'janek.rahrt@icloud.com'
+const { WORKING_APIKEY } = process.env
+const EMAIL = 'janek.rahrt@icloud.com'
+
+if (WORKING_APIKEY === undefined) {
+  throw Error(
+    `'WORKING_APIKEY' needs to be provided using environment variables`,
+  )
+}
 
 test('Create instance of EmailValidator', () => {
   expect(() => EmailValidator('')).toThrow()
@@ -12,16 +18,16 @@ test('Create instance of EmailValidator', () => {
 
 test('Use instance to check eMails', async () => {
   const instance = EmailValidator(WORKING_APIKEY)
-  const call = instance(EMAIL119)
+  const call = instance(EMAIL)
 
   expect(call).toBeInstanceOf(Promise)
-  
+
   const response = await call
 
   expect(response).toMatchObject({
     apiKey: WORKING_APIKEY,
-    email: EMAIL119,
-    statusCode: 119,
-    statusString: statusToString(119),
+    email: EMAIL,
+    statusCode: 200,
+    statusString: statusToString(200),
   })
 })
