@@ -1,6 +1,6 @@
 # email-validator-net
 
-A small library providing a wrapper for [api.email-validator.net](http://www.email-validator.net/email-address-online-verification-api.html)
+A small library providing a wrapper for [api.email-validator.net](https://www.email-validator.net/api.html)
 
 ## Installation
 

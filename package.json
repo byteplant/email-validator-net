@@ -1,16 +1,24 @@
 {
   "name": "email-validator-net",
-  "version": "2.0.2",
-  "description": "Wrapper for api.email-validator.net",
+  "version": "2.0.3",
+  "description": "A wrapper for api.email-validator.net",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "author": "Janek Rahrt <janek.rahrt@me.com>",
-  "homepage": "http://www.email-validator.net/email-address-online-verification-api.html",
+  "homepage": "https://www.email-validator.net/api.html",
   "keywords": [
-    "validator",
-    "eMail",
-    "mail",
-    "byteplant"
+    "email-validation",
+    "email",
+    "validation",
+    "byteplant",
+    "email-verification",
+    "email-marketing",
+    "email-cleaning",
+    "verification",
+    "cleaning",
+    "data-cleaning",
+    "data-quality",
+    "data-validation"
   ],
   "license": "MIT",
   "scripts": {
@@ -25,7 +33,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/janek26/email-validator-net.git"
+    "url": "git+https://github.com/byteplant/email-validator-net.git"
   },
   "files": [
     "lib/**/*"
